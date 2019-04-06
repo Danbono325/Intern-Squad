@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get 'about' => 'pages#about'
 
   get 'sponsors' => 'pages#sponsors'
+
+  get 'internships' => 'pages#internships'
 end
