@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get 'homepage' => 'welcome#homepage'
 
   get 'about' => 'pages#about'
+
+  get 'sponsors' => 'pages#sponsors'
 end
