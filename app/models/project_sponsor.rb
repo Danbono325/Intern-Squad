@@ -1,0 +1,2 @@
+class ProjectSponsor < ApplicationRecord
+end
