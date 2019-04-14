@@ -1,0 +1,39 @@
+<%= form_with(model: project_sponsor, local: true) do |form| %>
+  <% if project_sponsor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project_sponsor.errors.count, "error") %> prohibited this project_sponsor from being saved:</h2>
+
+      <ul>
+      <% project_sponsor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="field">
+    <%= form.label :ProjectSponsorName, 'Project Sponsor Name' %>
+    <%= form.text_field :ProjectSponsorName %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :ProjectName, 'Project Name' %>
+    <%= form.text_field :ProjectName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ProjectDesc, 'Project Description' %>
+    <%= form.text_area :ProjectDesc, :size =>150, :rows => "10" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ProjectSponsorLink, 'Project Sponsor Webpage Link' %>
+    <%= form.text_field :ProjectSponsorLink %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Submit Project'%>
+  </div>
+
+
+<% end %>

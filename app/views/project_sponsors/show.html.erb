@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project Name:</strong>
+  <%= @project_sponsor.ProjectName %>
+</p>
+
+<p>
+  <strong>Project Description:</strong>
+  <%= @project_sponsor.ProjectDesc %>
+</p>
+
+<p>
+  <strong>Project Sponsor's Name:</strong>
+  <%= @project_sponsor.ProjectSponsorName %>
+</p>
+
+<p>
+  <strong>Project Sponsor's Webpage Link:</strong>
+  <%= @project_sponsor.ProjectSponsorLink %>
+</p>
+
+<%= link_to 'Edit', edit_project_sponsor_path(@project_sponsor) %> |
+<%= link_to 'Back', project_sponsors_path %>
