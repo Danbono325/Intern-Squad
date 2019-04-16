@@ -1,17 +1,17 @@
 <html>
   <head>
    <style>
-    actions  {
-      padding-left: 40px;
+    div  {
+      padding-left:80px;
     }
-	head {
+	.header {
 	padding-left: 40px;
 	}
    </style>
   </head>
 </html>
 
-<qot class="header">
+<div class="header">
 <h1>Sponsor a Project Form </h1>
 </div>
 
@@ -19,7 +19,10 @@
 
   <div class="actions">
   <br>
-    <%= button_to 'Cancel Project', project_sponsors_path  %>
-  </div>
-  
 
+	<%= link_to '<button type="button">Cancel Project</button>'.html_safe, "../sponsors.html", {:style=>'color:#333333;', :class => "css_class"} %>
+	
+  </div>
+
+  
+  
