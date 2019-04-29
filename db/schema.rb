@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_04_11_160313) do
 
-  create_table "project_sponsors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "project_sponsors", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "ProjectName"
     t.string "ProjectDesc"
     t.string "ProjectSponsorName"
