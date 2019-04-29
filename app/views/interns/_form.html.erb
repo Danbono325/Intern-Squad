@@ -1,0 +1,71 @@
+<%= form_with(model: intern, local: true) do |form| %>
+  <% if intern.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(intern.errors.count, "error") %> prohibited this intern from being saved:</h2>
+
+      <ul>
+      <% intern.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :school %>
+    <%= form.text_field :school %>
+  </div>
+
+  <div class="field">
+    <%= form.label :education %>
+    <%= form.text_field :education %>
+  </div>
+
+  <div id="skills">
+  <p>Skills</p>
+  <div class="form-group">
+    <label for="html" class="checkbox-inline">
+      <input type="checkbox" id="html" value="HTML" v-model="checkedNames" />
+      HTML
+    </label>
+    <label for="javascript" class="checkbox-inline">
+      <input type="checkbox" id="javascript" value="javascript" v-model="checkedNames"/>
+      JavaScript
+    </label>
+    <label for="Java" class="checkbox-inline">
+      <input type="checkbox" id="Java" value="Java" v-model="checkedNames" />
+      Java
+    </label>
+
+  </div>
+</div>
+
+  <div class="field">
+    <%= form.label :database %>
+    <%= form.text_field :database %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ai %>
+    <%= form.text_field :ai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hours %>
+    <%= form.number_field :hours %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

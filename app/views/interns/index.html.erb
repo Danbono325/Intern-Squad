@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Interns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>School</th>
+      <th>Education</th>
+      <th>Html</th>
+      <th>Javascript</th>
+      <th>Java</th>
+      <th>Database</th>
+      <th>Ai</th>
+      <th>Hours</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @interns.each do |intern| %>
+      <tr>
+        <td><%= intern.name %></td>
+        <td><%= intern.email %></td>
+        <td><%= intern.school %></td>
+        <td><%= intern.education %></td>
+        <td><%= intern.html %></td>
+        <td><%= intern.javascript %></td>
+        <td><%= intern.java %></td>
+        <td><%= intern.database %></td>
+        <td><%= intern.ai %></td>
+        <td><%= intern.hours %></td>
+        <td><%= link_to 'Show', intern %></td>
+        <td><%= link_to 'Edit', edit_intern_path(intern) %></td>
+        <td><%= link_to 'Destroy', intern, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Intern', new_intern_path %>
