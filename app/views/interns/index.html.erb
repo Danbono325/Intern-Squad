@@ -26,11 +26,11 @@
         <td><%= intern.email %></td>
         <td><%= intern.school %></td>
         <td><%= intern.education %></td>
-        <td><%= intern.html %></td>
-        <td><%= intern.javascript %></td>
-        <td><%= intern.java %></td>
-        <td><%= intern.database %></td>
-        <td><%= intern.ai %></td>
+        <td><%= booleancheck(intern.html) %></td>
+        <td><%= booleancheck(intern.javascript) %></td>
+        <td><%= booleancheck(intern.java) %></td>
+        <td><%= booleancheck(intern.database) %></td>
+        <td><%= booleancheck(intern.ai) %></td>
         <td><%= intern.hours %></td>
         <td><%= link_to 'Show', intern %></td>
         <td><%= link_to 'Edit', edit_intern_path(intern) %></td>
