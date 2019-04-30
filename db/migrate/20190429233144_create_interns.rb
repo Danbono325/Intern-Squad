@@ -5,11 +5,11 @@ class CreateInterns < ActiveRecord::Migration[5.2]
       t.string :email
       t.string :school
       t.string :education
-      t.binary :html
-      t.binary :javascript
-      t.binary :java
-      t.binary :database
-      t.binary :ai
+      t.string :html
+      t.string :javascript
+      t.string :java
+      t.string :database
+      t.string :ai
       t.integer :hours
 
       t.timestamps

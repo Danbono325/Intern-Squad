@@ -26,47 +26,38 @@
     <%= form.text_field :school %>
   </div>
 
-  <div id="Education">
-  <strong>Education</strong>
-  <select name="education" id="education">
-<option value="1">Underclassman</option>
-<option value="2">Junior</option>
-<option value="3">Senior</option>
-<option value="4">Graduate</option>
-</select>
+  <div class="dropdown">
+    <%= form.label :education %>:
+    <%= form.radio_button :education, 'Underclassman' %>
+    <%= form.label :Underclassman %>
+
+    <%= form.radio_button :education, 'Junior' %>
+    <%= form.label :Junior %>
+
+    <%= form.radio_button :education, 'Senior' %>
+    <%= form.label :Senior %>
+
+    <%= form.radio_button :education, 'Graduate' %>
+    <%= form.label :Graduate %>
   </div>
 
   <div id="skills">
-  <strong>Skills</strong>
-  <div class="form-group">
-    <label for="html" class="checkbox-inline">
-      <input type="checkbox" id="html" value="HTML" v-model="checkedNames" />
-      HTML
-    </label>
-    <label for="javascript" class="checkbox-inline">
-      <input type="checkbox" id="javascript" value="javascript" v-model="checkedNames"/>
-      JavaScript
-    </label>
-    <label for="Java" class="checkbox-inline">
-      <input type="checkbox" id="Java" value="Java" v-model="checkedNames" />
-      Java
-    </label>
-    <label for="database" class="checkbox-inline">
-      <input type="checkbox" id="database" value="database" v-model="checkedNames" />
-      Java
-    </label>
+      <%= form.label 'Skills' %>:
+      <%= form.check_box :html %>
+      <%= form.label :HTML %>
+      
+      <%= form.check_box :javascript %>
+      <%= form.label :JavaScript %>
 
-  </div>
-</div>
+      <%= form.check_box :java %>
+      <%= form.label :Java %>
 
-  <div class="field">
-    <%= form.label :database %>
-    <%= form.text_field :database %>
-  </div>
+      <%= form.check_box :database %>
+      <%= form.label :Database %>
 
-  <div class="field">
-    <%= form.label :ai %>
-    <%= form.text_field :ai %>
+      <%= form.check_box :ai %>
+      <%= form.label :AI %>
+  
   </div>
 
   <div class="field">
