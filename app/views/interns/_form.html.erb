@@ -26,13 +26,18 @@
     <%= form.text_field :school %>
   </div>
 
-  <div class="field">
-    <%= form.label :education %>
-    <%= form.text_field :education %>
+  <div id="Education">
+  <strong>Education</strong>
+  <select name="education" id="education">
+<option value="1">Underclassman</option>
+<option value="2">Junior</option>
+<option value="3">Senior</option>
+<option value="4">Graduate</option>
+</select>
   </div>
 
   <div id="skills">
-  <p>Skills</p>
+  <strong>Skills</strong>
   <div class="form-group">
     <label for="html" class="checkbox-inline">
       <input type="checkbox" id="html" value="HTML" v-model="checkedNames" />
@@ -44,6 +49,10 @@
     </label>
     <label for="Java" class="checkbox-inline">
       <input type="checkbox" id="Java" value="Java" v-model="checkedNames" />
+      Java
+    </label>
+    <label for="database" class="checkbox-inline">
+      <input type="checkbox" id="database" value="database" v-model="checkedNames" />
       Java
     </label>
 
