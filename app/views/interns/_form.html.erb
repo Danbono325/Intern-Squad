@@ -1,0 +1,72 @@
+<%= form_with(model: intern, local: true) do |form| %>
+  <% if intern.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(intern.errors.count, "error") %> prohibited this intern from being saved:</h2>
+
+      <ul>
+      <% intern.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :school %>
+    <%= form.text_field :school %>
+  </div>
+
+  <div class="dropdown">
+    <%= form.label :education %>:
+    <%= form.radio_button :education, 'Underclassman' %>
+    <%= form.label :Underclassman %>
+
+    <%= form.radio_button :education, 'Junior' %>
+    <%= form.label :Junior %>
+
+    <%= form.radio_button :education, 'Senior' %>
+    <%= form.label :Senior %>
+
+    <%= form.radio_button :education, 'Graduate' %>
+    <%= form.label :Graduate %>
+  </div>
+
+  <div id="skills">
+      <%= form.label 'Skills' %>:
+     
+      <%= form.check_box :html %>
+      <%= form.label :HTML %>
+      
+      <%= form.check_box :javascript %>
+      <%= form.label :JavaScript %>
+
+      <%= form.check_box :java %>
+      <%= form.label :Java %>
+
+      <%= form.check_box :database %>
+      <%= form.label :Database %>
+
+      <%= form.check_box :ai %>
+      <%= form.label :AI %>
+  
+  </div>
+
+  <div class="field">
+    <%= form.label :hours %>
+    <%= form.select :hours, (8..40) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Save" %>
+  </div>
+<% end %>

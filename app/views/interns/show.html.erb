@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @intern.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @intern.email %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @intern.school %>
+</p>
+
+<p>
+  <strong>Education:</strong>
+  <%= @intern.education %>
+</p>
+
+<p>
+  <strong>HTML:</strong>
+  <%= booleancheck(@intern.html) %>
+</p>
+
+<p>
+  <strong>Javascript:</strong>
+  <%= booleancheck(@intern.javascript) %>
+</p>
+
+<p>
+  <strong>Java:</strong>
+  <%= booleancheck(@intern.java) %>
+</p>
+
+<p>
+  <strong>Database:</strong>
+  <%= booleancheck(@intern.database) %>
+</p>
+
+<p>
+  <strong>Ai:</strong>
+  <%= booleancheck(@intern.ai) %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @intern.hours %>
+</p>
+
+<%= link_to 'Edit', edit_intern_path(@intern) %> |
+<%= link_to 'Back', interns_path %>
