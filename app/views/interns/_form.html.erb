@@ -43,6 +43,7 @@
 
   <div id="skills">
       <%= form.label 'Skills' %>:
+     
       <%= form.check_box :html %>
       <%= form.label :HTML %>
       
@@ -62,7 +63,7 @@
 
   <div class="field">
     <%= form.label :hours %>
-    <%= form.number_field :hours %>
+    <%= form.select :hours, (8..40) %>
   </div>
 
   <div class="actions">

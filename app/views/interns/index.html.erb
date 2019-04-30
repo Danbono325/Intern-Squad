@@ -6,28 +6,14 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>     </th>
       <th>Email</th>
-      <th>     </th>
       <th>School</th>
-      <th>     </th>
       <th>Education</th>
-      <th>     </th>
-      <th>Html</th>
-      <th>     </th>
-      <th>     </th>
+      <th>HTML</th>
       <th>Javascript</th>
-      <th>     </th>
-      <th>     </th>
       <th>Java</th>
-      <th>     </th>
-      <th>     </th>
       <th>Database</th>
-      <th>     </th>
-      <th>     </th>
       <th>AI</th>
-      <th>     </th>
-      <th>     </th>
       <th>Hours</th>
       <th colspan="3"></th>
     </tr>
@@ -37,35 +23,17 @@
     <% @interns.each do |intern| %>
       <tr>
         <td><%= intern.name %></td>
-        <th>     </th>
         <td><%= intern.email %></td>
-        <th>     </th>
         <td><%= intern.school %></td>
-        <th>     </th>
         <td><%= intern.education %></td>
-        <th>     </th>
         <td><%= intern.html %></td>
-        <th>     </th>
-        <th>     </th>
         <td><%= intern.javascript %></td>
-        <th>     </th>
-        <th>     </th>
         <td><%= intern.java %></td>
-        <th>     </th>
-        <th>     </th>
         <td><%= intern.database %></td>
-        <th>     </th>
-        <th>     </th>
         <td><%= intern.ai %></td>
-        <th>     </th>
-        <th>     </th>
         <td><%= intern.hours %></td>
-        <th>     </th>
-        <th>     </th>
         <td><%= link_to 'Show', intern %></td>
-        <th>     </th>
         <td><%= link_to 'Edit', edit_intern_path(intern) %></td>
-        <th>     </th>
         <td><%= link_to 'Destroy', intern, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
