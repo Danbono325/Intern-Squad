@@ -27,7 +27,7 @@
   </div>
 
   <div class="dropdown">
-    <%= form.label :education %>:
+    <%= form.label "Education Level" %>:
     <%= form.radio_button :education, 'Underclassman' %>
     <%= form.label :Underclassman %>
 
@@ -62,11 +62,11 @@
   </div>
 
   <div class="field">
-    <%= form.label :hours %>
+    <%= form.label "Hours Available" %>
     <%= form.select :hours, (8..40) %>
   </div>
 
   <div class="actions">
-    <%= form.submit "Save" %>
+    <%= form.submit"Save" %>
   </div>
 <% end %>
