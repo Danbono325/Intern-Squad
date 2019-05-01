@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_29_233144) do
+ActiveRecord::Schema.define(version: 2019_05_01_163936) do
 
-  create_table "interns", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "interns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "school"
@@ -27,13 +27,13 @@ ActiveRecord::Schema.define(version: 2019_04_29_233144) do
     t.datetime "updated_at", null: false
   end
 
-
-  create_table "project_sponsors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "^"
+  create_table "project_sponsors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "ProjectName"
     t.string "ProjectDesc"
     t.string "ProjectSponsorName"
     t.string "ProjectSponsorLink"
+    t.string "ProjectScope"
+    t.boolean "feature"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
