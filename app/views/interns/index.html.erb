@@ -1,64 +1,63 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Interns</h1>
+  <h1>Interns</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-      <th>Email</th>
-      <th colspan="3"></th>
-      <th>School</th>
-      <th colspan="3"></th>
-      <th>Education</th>
-      <th colspan="3"></th>
-      <th>HTML</th>
-      <th colspan="3"></th>
-      <th>Javascript</th>
-      <th colspan="3"></th>
-      <th>Java</th>
-      <th colspan="3"></th>
-      <th>Database</th>
-      <th colspan="3"></th>
-      <th>AI</th>
-      <th colspan="3"></th>
-      <th>Hours</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @interns.each do |intern| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= intern.name %></td>
-        <th colspan="3"></th>
-        <td><%= intern.email %></td>
-        <th colspan="3"></th>
-        <td><%= intern.school %></td>
-        <th colspan="3"></th>
-        <td><%= intern.education %></td>
-        <th colspan="3"></th>
-        <td><%= booleancheck(intern.html) %></td>
-        <th colspan="3"></th>
-        <td><%= booleancheck(intern.javascript) %></td>
-        <th colspan="3"></th>
-        <td><%= booleancheck(intern.java) %></td>
-        <th colspan="3"></th>
-        <td><%= booleancheck(intern.database) %></td>
-        <th colspan="3"></th>
-        <td><%= booleancheck(intern.ai) %></td>
-        <th colspan="3"></th>
-        <td><%= intern.hours %></td>
-        <th colspan="3"></th>
-        <td><%= link_to 'Show', intern %></td>
-        <td><%= link_to 'Edit', edit_intern_path(intern) %></td>
-        <td><%= link_to 'Destroy', intern, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        
+        <th>Email</th>
+        
+        <th>School</th>
+        
+        <th>Education</th>
+        
+        <th>HTML</th>
+        
+        <th>Javascript</t>
+        
+        <th>Java</th>
+        
+        <th>Database</th>
+        
+        <th>AI</th>
+        
+        <th>Hours</th>
+        
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
+    </thead>
+    
+    <tbody>
+      <% @interns.each do |intern| %>
+        <tr>
+          <td><%= intern.name %></td>
+          
+          <td><%= intern.email %></td>
+          
+          <td><%= intern.school %></td>
+          
+          <td><%= intern.education %></td>
+          
+          <td><%= booleancheck(intern.html) %></td>
+          
+          <td><%= booleancheck(intern.javascript) %></td>
+          
+          <td><%= booleancheck(intern.java) %></td>
+          
+          <td><%= booleancheck(intern.database) %></td>
+          
+          <td><%= booleancheck(intern.ai) %></td>
+          
+          <td><%= intern.hours %></td>
+          
+          <td><%= link_to 'Show', intern %></td>
+          <td><%= link_to 'Edit', edit_intern_path(intern) %></td>
+          <td><%= link_to 'Destroy', intern, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 <br>
 
 <%= link_to 'New Intern', new_intern_path %>
