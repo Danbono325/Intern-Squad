@@ -14,26 +14,33 @@
   <div class="py-4">
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label "Full Name:" %>
+    <div class="pr-3">
     <%= form.text_field :name %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
+    <%= form.label "Email:" %>
+    <div class="pr-3">
     <%= form.text_field :email %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :school %>
+    <%= form.label "School:" %>
+    <div class="pr-3">
     <%= form.text_field :school %>
+    </div>
   </div>
 
   <div class="dropdown">
     <%= form.label "Education Level" %>:
     <div class= "pb-3">
+    
     <%= form.radio_button :education, 'Underclassman' %>
     <%= form.label :Underclassman %>
-
+    
     <%= form.radio_button :education, 'Junior' %>
     <%= form.label :Junior %>
 
@@ -46,15 +53,16 @@
   </div>
 
   <div id="skills">
-    <div class="pb-3">
+  
       <%= form.label 'Skills' %>:
       <div class="pr-4">
+      
       <%= form.check_box :html %>
       <%= form.label :HTML %>
       
       <%= form.check_box :javascript %>
       <%= form.label :JavaScript %>
-
+    
       <%= form.check_box :java %>
       <%= form.label :Java %>
 
@@ -63,10 +71,11 @@
 
       <%= form.check_box :ai %>
       <%= form.label :AI %>
+  
       </div>
-      </div>
-  </div>
 
+  </div>
+  <div class="py-3">
   <div class="field">
     <%= form.label "Hours Available" %>
     <%= form.select :hours, (8..40) %>
