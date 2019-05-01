@@ -1,0 +1,89 @@
+<%= form_with(model: intern, local: true) do |form| %>
+  <% if intern.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(intern.errors.count, "error") %> prohibited this intern from being saved:</h2>
+
+      <ul>
+      <% intern.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="py-4">
+
+  <div class="field">
+    <%= form.label "Full Name:" %>
+    <div class="pr-3">
+    <%= form.text_field :name %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label "Email:" %>
+    <div class="pr-3">
+    <%= form.text_field :email %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label "School:" %>
+    <div class="pr-3">
+    <%= form.text_field :school %>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <%= form.label "Education Level" %>:
+    <div class= "pb-3">
+    
+    <%= form.radio_button :education, 'Underclassman' %>
+    <%= form.label :Underclassman %>
+    
+    <%= form.radio_button :education, 'Junior' %>
+    <%= form.label :Junior %>
+
+    <%= form.radio_button :education, 'Senior' %>
+    <%= form.label :Senior %>
+
+    <%= form.radio_button :education, 'Graduate' %>
+    <%= form.label :Graduate %>
+  </div>
+  </div>
+
+  <div id="skills">
+  
+      <%= form.label 'Skills' %>:
+      <div class="pr-4">
+      
+      <%= form.check_box :html %>
+      <%= form.label :HTML %>
+      
+      <%= form.check_box :javascript %>
+      <%= form.label :JavaScript %>
+    
+      <%= form.check_box :java %>
+      <%= form.label :Java %>
+
+      <%= form.check_box :database %>
+      <%= form.label :Database %>
+
+      <%= form.check_box :ai %>
+      <%= form.label :AI %>
+  
+      </div>
+
+  </div>
+  <div class="py-3">
+  <div class="field">
+    <%= form.label "Hours Available" %>
+    <%= form.select :hours, (8..40) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit"Save" %>
+  </div>
+
+  </div>
+<% end %>
