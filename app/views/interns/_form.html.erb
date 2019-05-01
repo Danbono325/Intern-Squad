@@ -1,4 +1,3 @@
-<div class = "pl-4">
 <%= form_with(model: intern, local: true) do |form| %>
   <% if intern.errors.any? %>
     <div id="error_explanation">
@@ -11,6 +10,8 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="py-4">
 
   <div class="field">
     <%= form.label :name %>
@@ -29,6 +30,7 @@
 
   <div class="dropdown">
     <%= form.label "Education Level" %>:
+    <div class= "pb-3">
     <%= form.radio_button :education, 'Underclassman' %>
     <%= form.label :Underclassman %>
 
@@ -41,10 +43,12 @@
     <%= form.radio_button :education, 'Graduate' %>
     <%= form.label :Graduate %>
   </div>
+  </div>
 
   <div id="skills">
+    <div class="pb-3">
       <%= form.label 'Skills' %>:
-     
+      <div class="pr-4">
       <%= form.check_box :html %>
       <%= form.label :HTML %>
       
@@ -59,7 +63,8 @@
 
       <%= form.check_box :ai %>
       <%= form.label :AI %>
-  
+      </div>
+      </div>
   </div>
 
   <div class="field">
@@ -70,5 +75,6 @@
   <div class="actions">
     <%= form.submit"Save" %>
   </div>
-</div>
+
+  </div>
 <% end %>
