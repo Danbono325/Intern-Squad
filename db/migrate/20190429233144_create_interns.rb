@@ -11,6 +11,7 @@ class CreateInterns < ActiveRecord::Migration[5.2]
       t.boolean :database
       t.boolean :ai
       t.integer :hours
+     
 
       t.timestamps
     end
