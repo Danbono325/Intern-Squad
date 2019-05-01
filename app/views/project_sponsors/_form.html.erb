@@ -56,6 +56,12 @@
 	<%= form.select :ProjectScope, ['Artificial Intelligence', 'option2']%>
   </div>
 
+    <div class="field">
+    <%= form.label :feature, 'Project Sponsor Webpage Link' %>
+    <br>
+	<%= form.check_box :feature %>
+  </div>
+  
   <div class="actions">
 <br>
     <%= form.submit 'Submit Project'%>
