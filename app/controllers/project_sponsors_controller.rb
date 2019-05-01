@@ -7,6 +7,8 @@ class ProjectSponsorsController < ApplicationController
     @project_sponsors = ProjectSponsor.all
   end
 
+  
+  
   # GET /project_sponsors/1
   # GET /project_sponsors/1.json
   def show

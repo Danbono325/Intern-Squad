@@ -1,3 +1,18 @@
+<html>
+  <head>
+   <style>
+    body {
+      background-color: #f0f0f0;
+    }
+    div  {
+      padding-left: 80px;
+    }
+	.header {
+	}
+   </style>
+  </head>
+</html>
+
 <%= form_with(model: project_sponsor, local: true) do |form| %>
   <% if project_sponsor.errors.any? %>
     <div id="error_explanation">
@@ -13,25 +28,30 @@
 
     <div class="field">
     <%= form.label :ProjectSponsorName, 'Project Sponsor Name' %>
+	<br>
     <%= form.text_field :ProjectSponsorName %>
   </div>
   
   <div class="field">
     <%= form.label :ProjectName, 'Project Name' %>
-    <%= form.text_field :ProjectName %>
+    <br>
+	<%= form.text_field :ProjectName %>
   </div>
 
   <div class="field">
     <%= form.label :ProjectDesc, 'Project Description' %>
-    <%= form.text_area :ProjectDesc, :size =>150, :rows => "10" %>
+    <br>
+	<%= form.text_area :ProjectDesc, :size =>150, :rows => "10" %>
   </div>
 
   <div class="field">
     <%= form.label :ProjectSponsorLink, 'Project Sponsor Webpage Link' %>
-    <%= form.text_field :ProjectSponsorLink %>
+    <br>
+	<%= form.text_field :ProjectSponsorLink %>
   </div>
 
   <div class="actions">
+<br>
     <%= form.submit 'Submit Project'%>
   </div>
 

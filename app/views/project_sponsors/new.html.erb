@@ -1,5 +1,28 @@
-<h1>Sponsor a Project Form</h1>
+<html>
+  <head>
+   <style>
+    div  {
+      padding-left:80px;
+    }
+	.header {
+	padding-left: 40px;
+	}
+   </style>
+  </head>
+</html>
+
+<div class="header">
+<h1>Sponsor a Project Form </h1>
+</div>
 
 <%= render 'form', project_sponsor: @project_sponsor %>
 
-<%= button_to 'Cancel Project', project_sponsors_path %>
+  <div class="actions">
+  <br>
+
+	<%= link_to '<button type="button">Cancel Project</button>'.html_safe, "../sponsors.html", {:style=>'color:#333333;', :class => "css_class"} %>
+	
+  </div>
+
+  
+  
