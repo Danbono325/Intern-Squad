@@ -71,6 +71,6 @@ class ProjectSponsorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_sponsor_params
-      params.require(:project_sponsor).permit(:ProjectName, :ProjectDesc, :ProjectSponsorName, :ProjectSponsorLink)
+      params.require(:project_sponsor).permit(:ProjectName, :ProjectDesc, :ProjectSponsorName, :ProjectSponsorLink, :ProjectScope, :feature)
     end
 end
