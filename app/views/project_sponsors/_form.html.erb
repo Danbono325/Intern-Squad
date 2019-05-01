@@ -41,7 +41,7 @@
   <div class="field">
     <%= form.label :ProjectDesc, 'Project Description' %>
     <br>
-	<%= form.text_area :ProjectDesc, :size =>150, :rows => "10" %>
+	<%= form.text_area :ProjectDesc, :size =>200, :rows => "10" %>
   </div>
 
   <div class="field">
@@ -58,8 +58,7 @@
 
     <div class="field">
     <%= form.label :feature, 'Project Sponsor Webpage Link' %>
-    <br>
-	<%= form.check_box :feature %>
+	<%= form.check_box :feature, :style => "width: 15px; height: 15px;"%>
   </div>
   
   <div class="actions">
