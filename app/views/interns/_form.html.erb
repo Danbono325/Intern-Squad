@@ -1,3 +1,4 @@
+<div class = "pl-4">
 <%= form_with(model: intern, local: true) do |form| %>
   <% if intern.errors.any? %>
     <div id="error_explanation">
@@ -69,4 +70,5 @@
   <div class="actions">
     <%= form.submit"Save" %>
   </div>
+</div>
 <% end %>
