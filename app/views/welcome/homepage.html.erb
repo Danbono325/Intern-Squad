@@ -12,8 +12,19 @@
         <img src="https://media.istockphoto.com/photos/quality-customer-service-is-a-team-effort-picture-id646805636" class="card-img-top" alt="Image didn't load">
         <div class="card-body">
 		
-            <h5 class="card-title"><%=featuredProjs.first.ProjectName  %></h5>			
-            <p class="card-text">Featured Project: <%=featuredProjs.first.ProjectDesc  %></p>
+            <h5 class="card-title">
+			<%if featuredProjs.first%>
+			<%=featuredProjs.first.ProjectName  %>
+			<%end%>
+			</h5>			
+			
+            <p class="card-text">
+			<%if featuredProjs.first%>
+						Featured Project: 
+			<%=featuredProjs.first.ProjectDesc  %>
+			<%end%>
+			</h5>
+			</p>
            
 		   <a href="internships.html#title1" class="btn btn-light">Get More Info</a>
         </div>
@@ -22,9 +33,20 @@
         <img src="https://media.istockphoto.com/photos/happy-caucasian-intern-listening-to-indian-mentor-explaining-computer-picture-id1070271494?s=2048x2048" class="card-img-top" alt="Image didn't load">
         <div class="card-body">
         
-			<h5 class="card-title"><%=featuredProjs.second.ProjectName  %></h5>
-            <p class="card-text">Featured Project: <%=featuredProjs.second.ProjectDesc  %></p>
-
+			<h5 class="card-title">			
+			<%if featuredProjs.second%>
+			<%=featuredProjs.second.ProjectName  %>
+			<%end%>
+			</h5>
+                       
+			<p class="card-text">
+			<%if featuredProjs.second%>
+						Featured Project: 
+			<%=featuredProjs.second.ProjectDesc  %>
+			<%end%>
+			</h5>
+			</p>
+			
             <a href="internships.html#title2" class="btn btn-light">Get More Info</a>
         </div>
         </div>
@@ -32,9 +54,20 @@
         <img src="https://media.istockphoto.com/photos/click-here-and-it-should-direct-you-further-picture-id1134029530" class="card-img-top" alt="Image didn't load">
         <div class="card-body">
 
-			<h5 class="card-title"><%=featuredProjs.third.ProjectName  %></h5>
-            <p class="card-text">Featured Project: <%=featuredProjs.third.ProjectDesc  %></p>
-
+			<h5 class="card-title">
+			<%if featuredProjs.third%>
+			<%=featuredProjs.third.ProjectName  %>
+			<%end%>
+			</h5>
+			
+            <p class="card-text">
+			<%if featuredProjs.third%>
+						Featured Project: 
+			<%=featuredProjs.third.ProjectDesc  %>
+			<%end%>
+			</h5>
+			</p>
+			
             <a href="internships.html#title3" class="btn btn-light">Get More Info</a>
         </div>
         </div>
