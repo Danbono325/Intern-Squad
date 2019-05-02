@@ -80,7 +80,12 @@
     <%= form.label "Hours Available" %>
     <%= form.select :hours, (8..40) %>
   </div>
-
+  
+  <div class="field">
+    <%= form.label "Upload a Resume:" %>
+    <%= form.file_field :resume %>
+  </div>
+  
   <div class="actions">
     <%= form.submit"Save" %>
   </div>
