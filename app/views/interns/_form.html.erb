@@ -81,13 +81,11 @@
     <%= form.select :hours, (8..40) %>
   </div>
   
-  <form>
-    <div class="form-group">
-      <label for="exampleFormControlFile1">Upload a Resume</label>
-      <input type="file" class="form-control-file" id="exampleFormControlFile1">
-    </div>
-  </form>
-
+  <div class="field">
+    <%= form.label "Upload a Resume:" %>
+    <%= form.file_field :email %>
+  </div>
+  
   <div class="actions">
     <%= form.submit"Save" %>
   </div>
