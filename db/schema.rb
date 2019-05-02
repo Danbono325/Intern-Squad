@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_05_02_021541) do
 
-  create_table "interns", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "interns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "school"
@@ -28,14 +28,15 @@ ActiveRecord::Schema.define(version: 2019_05_02_021541) do
     t.string "resume"
   end
 
-  create_table "project_sponsors", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "project_sponsors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "ProjectName"
     t.string "ProjectDesc"
     t.string "ProjectSponsorName"
     t.string "ProjectSponsorLink"
+    t.string "ProjectScope"
+    t.boolean "feature"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "ProjectScope"
   end
 
 end
