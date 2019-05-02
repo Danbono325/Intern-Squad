@@ -12,6 +12,7 @@ class ProjectSponsorsController < ApplicationController
   # GET /project_sponsors/1
   # GET /project_sponsors/1.json
   def show
+  @project_sponsors = ProjectSponsor.all
   end
 
   # GET /project_sponsors/new
@@ -38,7 +39,7 @@ class ProjectSponsorsController < ApplicationController
       end
     end
   end
-
+  
   # PATCH/PUT /project_sponsors/1
   # PATCH/PUT /project_sponsors/1.json
   def update
