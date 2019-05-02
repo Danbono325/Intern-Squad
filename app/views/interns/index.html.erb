@@ -2,59 +2,60 @@
 
 <h1>Interns</h1>
 
-<table>
+<table cellpadding = "10">
   <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-      <th>Email</th>
-      <th colspan="3"></th>
-      <th>School</th>
-      <th colspan="3"></th>
-      <th>Education</th>
-      <th colspan="3"></th>
-      <th>HTML</th>
-      <th colspan="3"></th>
-      <th>Javascript</th>
-      <th colspan="3"></th>
-      <th>Java</th>
-      <th colspan="3"></th>
-      <th>Database</th>
-      <th colspan="3"></th>
-      <th>AI</th>
-      <th colspan="3"></th>
-      <th>Hours</th>
-      <th colspan="3"></th>
-      <th>Resume</th>
-      <th colspan="3"></th>
-    </tr>
+
+      <tr align = "justify">
+        <th align ="center">Name</th>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <th align ="center">Email</th>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <th align ="center">School</th>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <th align ="center">Education</th>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <th align ="center">HTML</th>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <th align ="center">Javascript</th>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <th align ="center">Java</th>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <th align ="center">Database</th>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <th align ="center">AI</th>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <th align ="center">Hours</th>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <th align ="center">Resume</th>
+      </tr>
   </thead>
 
   <tbody>
     <% @interns.each do |intern| %>
-      <tr>
-        <td><%= intern.name %></td>
-        <th colspan="3"></th>
-        <td><%= intern.email %></td>
-        <th colspan="3"></th>
-        <td><%= intern.school %></td>
-        <th colspan="3"></th>
-        <td><%= intern.education %></td>
-        <th colspan="3"></th>
-        <td><%= booleancheck(intern.html) %></td>
-        <th colspan="3"></th>
-        <td><%= booleancheck(intern.javascript) %></td>
-        <th colspan="3"></th>
-        <td><%= booleancheck(intern.java) %></td>
-        <th colspan="3"></th>
-        <td><%= booleancheck(intern.database) %></td>
-        <th colspan="3"></th>
-        <td><%= booleancheck(intern.ai) %></td>
-        <th colspan="3"></th>
-        <td><%= intern.hours %></td>
-        <th colspan="3"></th>
-        <td><%= intern.resume %></td>
-        <th colspan="3"></th>
+      <tr align = "justify">
+        <td align ="center"><%= intern.name %></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td align ="center"><%= intern.email %></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td align ="center"><%= intern.school %></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td align ="center"><%= intern.education %></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td align ="center"><%= booleancheck(intern.html) %></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td align ="center"><%= booleancheck(intern.javascript) %></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td align ="center"><%= booleancheck(intern.java) %></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td align ="center"><%= booleancheck(intern.database) %></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td align ="center"><%= booleancheck(intern.ai) %></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td align ="center"><%= intern.hours %></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td align ="center"><%= intern.resume %></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
         <td><%= link_to 'Show', intern %></td>
         <td><%= link_to 'Edit', edit_intern_path(intern) %></td>
         <td><%= link_to 'Destroy', intern, method: :delete, data: { confirm: 'Are you sure?' } %></td>
