@@ -18,10 +18,7 @@
 <%= render 'form', project_sponsor: @project_sponsor %>
 
   <div class="actions">
-  <br>
-
-	<%= link_to '<button type="button">Cancel Project</button>'.html_safe, "../sponsors.html", {:style=>'color:#333333;', :class => "css_class"} %>
-	
+    <%= link_to 'Cancel', project_sponsors_path %>
   </div>
 
   

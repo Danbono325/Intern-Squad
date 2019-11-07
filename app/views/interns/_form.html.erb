@@ -1,3 +1,18 @@
+<html>
+  <head>
+   <style>
+    body {
+      background-color: #f0f0f0;
+    }
+    div  {
+      padding-left: 80px;
+    }
+	.header {
+	}
+   </style>
+  </head>
+</html>
+
 <%= form_with(model: intern, local: true) do |form| %>
   <% if intern.errors.any? %>
     <div id="error_explanation">
@@ -11,33 +26,28 @@
     </div>
   <% end %>
   
-  <div class="py-4">
 
   <div class="field">
-    <%= form.label "Full Name:" %>
-    <div class="pr-3">
+    <%= form.label :name,"Full Name:" %>
+      <br>
     <%= form.text_field :name %>
-    </div>
   </div>
 
   <div class="field">
-    <%= form.label "Email:" %>
-    <div class="pr-3">
+    <%= form.label :email, "Email:" %>
+      <br>
     <%= form.text_field :email %>
-    </div>
   </div>
 
   <div class="field">
-    <%= form.label "School:" %>
-    <div class="pr-3">
+    <%= form.label :school, "School:" %>
+      <br>
     <%= form.text_field :school %>
-    </div>
   </div>
 
   <div class="dropdown">
 
-    <%= form.label "Education Level" %>:
-    <div class= "pb-3">
+    <%= form.label "Education Level" %>
 
     <%= form.radio_button :education, 'Freshman' %>
     <%= form.label :Freshman %>
@@ -53,13 +63,14 @@
 
     <%= form.radio_button :education, 'Graduate' %>
     <%= form.label :Graduate %>
+    
   </div>
-  </div>
+
+  <br>
 
   <div id="skills">
   
       <%= form.label 'Skills' %>:
-      <div class="pr-4">
       
       <%= form.check_box :html %>
       <%= form.label :HTML %>
@@ -74,19 +85,19 @@
       <%= form.label :Database %>
 
       <%= form.check_box :ai %>
-      <%= form.label :AI %>
-  
-      </div>
+      <%= form.label :AI %>    
 
   </div>
-  <div class="py-3">
+
+  <br>
+
   <div class="field">
-    <%= form.label "Hours Available" %>
+    <%= form.label :hours, "Hours Available" %>
     <%= form.select :hours, (8..40) %>
   </div>
   
   <div class="field">
-    <%= form.label "Upload a Resume:" %>
+    <%= form.label :resume,"Upload a Resume:" %>
     <%= form.file_field :resume %>
   </div>
   
