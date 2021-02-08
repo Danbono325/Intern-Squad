@@ -26,7 +26,7 @@ gem 'bootstrap-sass'
 #JQuery
 gem 'jquery-rails';
 
-gem 'carrierwave', '~> 0.9'
+gem 'carrierwave', '~> 1.3'
 
 gem 'active_link_to'
 
